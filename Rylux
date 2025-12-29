@@ -1,8 +1,8 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "DrakoScripts  | Library",
-   LoadingTitle = "DrakoScripts  Hub",
+   Name = "DrakoScripts | Library",
+   LoadingTitle = "DrakoScripts Hub",
    LoadingSubtitle = "by DrakoScripts",
    ConfigurationSaving = {
       Enabled = true,
@@ -17,7 +17,7 @@ local Window = Rayfield:CreateWindow({
    KeySystem = false
 })
 
--- BUTTON DATA (HUBS REMOVED)
+-- SCRIPT BUTTON DATA
 local buttonData = {
     ["Steal A Brainrot (Instant Steal)"] =
         'loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRlPT-HUB/StealABrainrot/refs/heads/main/InstantSteal"))()',
@@ -31,6 +31,7 @@ local buttonData = {
 
 local lastUsedScript = "None"
 
+-- EXECUTE FUNCTION
 local function ExecuteScript(name, scriptCode)
     if not scriptCode or scriptCode == "" then
         Rayfield:Notify({
@@ -43,6 +44,7 @@ local function ExecuteScript(name, scriptCode)
     end
 
     lastUsedScript = name
+
     Rayfield:Notify({
        Title = "Executing",
        Content = name,
@@ -93,7 +95,7 @@ local AdoptMeTab = Window:CreateTab("ADM", 4483362458)
 for name, scriptCode in pairs(buttonData) do
     if name:find("Adopt Me") then
         AdoptMeTab:CreateButton({
-           Name = name:gsub("Adopt Me %(%s*(.-)%s*%)", "%1"),
+           Name = "Pet Spawner V1",
            Callback = function()
                ExecuteScript(name, scriptCode)
            end,
@@ -106,7 +108,20 @@ local MM2Tab = Window:CreateTab("MM2", 4483362458)
 for name, scriptCode in pairs(buttonData) do
     if name:find("Murder Mystery 2") then
         MM2Tab:CreateButton({
-           Name = name:gsub("Murder Mystery 2 %(%s*(.-)%s*%)", "%1"),
+           Name = "Autofarm Snowflakes",
+           Callback = function()
+               ExecuteScript(name, scriptCode)
+           end,
+        })
+    end
+end
+
+-- STEAL A BRAINROT TAB
+local BrainrotTab = Window:CreateTab("STEAL A BRAINROT", 4483362458)
+for name, scriptCode in pairs(buttonData) do
+    if name:find("Steal A Brainrot") then
+        BrainrotTab:CreateButton({
+           Name = "Instant Steal",
            Callback = function()
                ExecuteScript(name, scriptCode)
            end,
