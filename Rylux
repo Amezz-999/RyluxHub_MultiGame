@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "DrakoScripts  | Library",
    LoadingTitle = "DrakoScripts  Hub",
-   LoadingSubtitle = "by DrakoScripts  ",
+   LoadingSubtitle = "by DrakoScripts",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = "DrakoScripts Hub",
@@ -17,7 +17,7 @@ local Window = Rayfield:CreateWindow({
    KeySystem = false
 })
 
--- FIXED BUTTON DATA (QUOTES CORRECTED)
+-- BUTTON DATA (HUBS REMOVED)
 local buttonData = {
     ["Steal A Brainrot (Instant Steal)"] =
         'loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRlPT-HUB/StealABrainrot/refs/heads/main/InstantSteal"))()',
@@ -26,22 +26,7 @@ local buttonData = {
         'loadstring(game:HttpGet("https://pastefy.app/AOeUfQj7/raw"))()',
 
     ["Murder Mystery 2 (Autofarm snowflakes)"] =
-        'loadstring(game:HttpGet("https://pastefy.app/fXUb0SDq/raw"))()',
-
-    ["Ronix Hub"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/StonK-StonK/RonixHub/main/Main"))()',
-
-    ["Thunder Z Hub"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()',
-
-    ["Limit Hub"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/Limit-Hub/Limit-Hub/main/Main"))()',
-
-    ["Speed Hub"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()',
-
-    ["Quantum Hub"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/QuantumHub/Main/main/Loader"))()'
+        'loadstring(game:HttpGet("https://pastefy.app/fXUb0SDq/raw"))()'
 }
 
 local lastUsedScript = "None"
@@ -92,7 +77,7 @@ local function ExecuteScript(name, scriptCode)
     end
 end
 
--- TABS
+-- ALL TAB
 local AllTab = Window:CreateTab("ALL", 4483362458)
 for name, scriptCode in pairs(buttonData) do
     AllTab:CreateButton({
@@ -103,6 +88,7 @@ for name, scriptCode in pairs(buttonData) do
     })
 end
 
+-- ADOPT ME TAB
 local AdoptMeTab = Window:CreateTab("ADM", 4483362458)
 for name, scriptCode in pairs(buttonData) do
     if name:find("Adopt Me") then
@@ -115,6 +101,7 @@ for name, scriptCode in pairs(buttonData) do
     end
 end
 
+-- MM2 TAB
 local MM2Tab = Window:CreateTab("MM2", 4483362458)
 for name, scriptCode in pairs(buttonData) do
     if name:find("Murder Mystery 2") then
@@ -127,19 +114,6 @@ for name, scriptCode in pairs(buttonData) do
     end
 end
 
-local OthersTab = Window:CreateTab("OTHERS", 4483362458)
-local hubs = {"Ronix Hub", "Thunder Z Hub", "Limit Hub", "Speed Hub", "Quantum Hub"}
-for _, name in ipairs(hubs) do
-    if buttonData[name] then
-        OthersTab:CreateButton({
-           Name = name,
-           Callback = function()
-               ExecuteScript(name, buttonData[name])
-           end,
-        })
-    end
-end
-
 -- INFO TAB
 local InfoTab = Window:CreateTab("Info", 4483362458)
 
@@ -147,7 +121,7 @@ InfoTab:CreateSection("Community")
 InfoTab:CreateButton({
    Name = "Copy Discord Server",
    Callback = function()
-       setclipboard("https://discord.gg/Uwwbd2T3cf")
+       setclipboard("https://discord.gg/jgvEZc6FbK")
        Rayfield:Notify({
           Title = "Copied!",
           Content = "Discord link copied to clipboard.",
