@@ -3,11 +3,11 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "DrakoScripts  | Library",
    LoadingTitle = "DrakoScripts  Hub",
-   LoadingSubtitle = "byDrakoScripts  ",
+   LoadingSubtitle = "by DrakoScripts  ",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = "C1DHub",
-      FileName = "C1DLibrary"
+      FolderName = "DrakoScripts Hub",
+      FileName = "DrakoScripts Library"
    },
    Discord = {
       Enabled = false,
