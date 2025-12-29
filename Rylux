@@ -1,9 +1,9 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "C1D Hub | Library",
-   LoadingTitle = "C1D Hub",
-   LoadingSubtitle = "by cid",
+   Name = "DrakoScripts  | Library",
+   LoadingTitle = "DrakoScripts  Hub",
+   LoadingSubtitle = "byDrakoScripts  ",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = "C1DHub",
