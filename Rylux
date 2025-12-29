@@ -19,8 +19,8 @@ local Window = Rayfield:CreateWindow({
 
 -- SCRIPT BUTTON DATA
 local buttonData = {
-    ["Steal A Brainrot (Zzzz Lag)"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRlPT-HUB/StealABrainrot/refs/heads/main/InstantSteal"))()'
+    ["Steal A Brainrot (Zzzz  Hub)"] =
+        'loadstring(game:HttpGet("https://raw.githubusercontent.com/Amezz-999/kwekwek/refs/heads/main/latest"))()'
 }
 
 local lastUsedScript = "None"
