@@ -20,13 +20,7 @@ local Window = Rayfield:CreateWindow({
 -- SCRIPT BUTTON DATA
 local buttonData = {
     ["Steal A Brainrot (Instant Steal)"] =
-        'loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRlPT-HUB/StealABrainrot/refs/heads/main/InstantSteal"))()',
-
-    ["Adopt Me (Pet Spawner V1)"] =
-        'loadstring(game:HttpGet("https://pastefy.app/AOeUfQj7/raw"))()',
-
-    ["Murder Mystery 2 (Autofarm snowflakes)"] =
-        'loadstring(game:HttpGet("https://pastefy.app/fXUb0SDq/raw"))()'
+        'loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRlPT-HUB/StealABrainrot/refs/heads/main/InstantSteal"))()'
 }
 
 local lastUsedScript = "None"
@@ -79,54 +73,15 @@ local function ExecuteScript(name, scriptCode)
     end
 end
 
--- ALL TAB
-local AllTab = Window:CreateTab("ALL", 4483362458)
+-- STEAL A BRAINROT TAB ONLY
+local BrainrotTab = Window:CreateTab("STEAL A BRAINROT", 4483362458)
 for name, scriptCode in pairs(buttonData) do
-    AllTab:CreateButton({
-       Name = name,
+    BrainrotTab:CreateButton({
+       Name = "Instant Steal",
        Callback = function()
            ExecuteScript(name, scriptCode)
        end,
     })
-end
-
--- ADOPT ME TAB
-local AdoptMeTab = Window:CreateTab("ADM", 4483362458)
-for name, scriptCode in pairs(buttonData) do
-    if name:find("Adopt Me") then
-        AdoptMeTab:CreateButton({
-           Name = "Pet Spawner V1",
-           Callback = function()
-               ExecuteScript(name, scriptCode)
-           end,
-        })
-    end
-end
-
--- MM2 TAB
-local MM2Tab = Window:CreateTab("MM2", 4483362458)
-for name, scriptCode in pairs(buttonData) do
-    if name:find("Murder Mystery 2") then
-        MM2Tab:CreateButton({
-           Name = "Autofarm Snowflakes",
-           Callback = function()
-               ExecuteScript(name, scriptCode)
-           end,
-        })
-    end
-end
-
--- STEAL A BRAINROT TAB
-local BrainrotTab = Window:CreateTab("STEAL A BRAINROT", 4483362458)
-for name, scriptCode in pairs(buttonData) do
-    if name:find("Steal A Brainrot") then
-        BrainrotTab:CreateButton({
-           Name = "Instant Steal",
-           Callback = function()
-               ExecuteScript(name, scriptCode)
-           end,
-        })
-    end
 end
 
 -- INFO TAB
