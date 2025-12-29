@@ -19,7 +19,7 @@ local Window = Rayfield:CreateWindow({
 
 -- SCRIPT BUTTON DATA
 local buttonData = {
-    ["Steal A Brainrot (Instant Steal)"] =
+    ["Steal A Brainrot (Zzzz Lag )"] =
         'loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRlPT-HUB/StealABrainrot/refs/heads/main/InstantSteal"))()'
 }
 
