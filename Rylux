@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Amezz-999/kwekwek/refs/heads/main/latest"))()
+loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/86dTony9PGicrLfb/raw", true))()
